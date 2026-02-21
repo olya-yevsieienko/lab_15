@@ -1,0 +1,35 @@
+.header {
+  position: sticky;
+  top: 0;
+  background-color: #2c3e50;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.header__nav-list {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.header__nav-link-item {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.header__nav-link-item:hover {
+  color: #3498db;
+}
+
+.header__nav-link-item.active {
+  color: #3498db;
+  font-weight: bold;
+}
