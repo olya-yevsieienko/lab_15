@@ -1,26 +1,23 @@
 import { Route, Routes } from 'react-router-dom';
-import { CONTENT_TYPE } from '../../constants';
-import MainSection from './MainSection/MainSection';
-import MainArticle from './MainArticle/MainArticle';
-import NotFound from '../NotFound/NotFound';
-import MainAside from './MainAside/MainAside';
+import NotFound from '../Pages/NotFound/NotFound';
+import HomePage from '../Pages/HomePage/HomePage';
+import AboutUsPage from '../Pages/AboutUsPage/AboutUsPage';
+import CatalogPage from '../Pages/CatalogPage/CatalogPage';
+import RegistrationPage from '../Pages/RegistrationPage/RegistrationPage';
 
-import './Main.css';
+import './Main.scss';
 
 const Main = () => {
     return (
         <main className="main">
             <div className="main__content">
-                <MainSection />
-                <div className="main__divider"></div>
                 <Routes>
-                    <Route path="/" element={<MainArticle type={CONTENT_TYPE.NEWS} />} />
-                    <Route path="/about" element={<MainArticle type={CONTENT_TYPE.ABOUT} />} />
-                    <Route path="/contacts" element={<MainArticle type={CONTENT_TYPE.CONTACTS} />} />
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/about" element={<AboutUsPage />} />
+                    <Route path="/registration" element={<RegistrationPage />} />
+                    <Route path="/catalog" element={<CatalogPage />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
-                <div className="main__divider"></div>
-                <MainAside />
             </div>
         </main>
     );

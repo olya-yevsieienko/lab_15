@@ -1,0 +1,71 @@
+@import '../../assets/styles/mixins.scss';
+@import '../../assets/styles/vars.scss';
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  height: $header-height;
+  padding: 2rem;
+  background-color: $background-color;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+  @include devices($tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    height: $header-height-mobile;
+  }
+
+  &__nav {
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      justify-content: center;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      list-style: none;
+    }
+
+    &-link-item {
+      position: relative;
+      color: $light-text-color;
+      text-decoration: none;
+      font-size: 20px;
+      text-transform: uppercase;
+      transition: color 0.3s;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        right: 0;
+        width: 0;
+        height: 2px;
+        background-color: $light-text-color;
+        transition: width 0.3s ease;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+
+    @include devices($tablet) {
+      display: none;
+    }
+  }
+
+  &__menu-button {
+    display: none;
+
+    @include devices($tablet) {
+      display: block;
+    }
+  }
+}

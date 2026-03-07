@@ -1,38 +1,29 @@
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import {navigationList} from '../../models';
+import HeaderLink from './HeaderLink';
 
-import './Header.css';
+import './Header.scss';
 
 const Header = () => {
     return (
         <header className="header">
+            <div>
+                <Link to="/">
+                    Logo
+                </Link>
+            </div>
             <nav className="header__nav">
                 <ul className="header__nav-list">
-                    <li className="header__nav-link">
-                        <Link
-                            to="/"
-                            className="header__nav-link-item"
-                        >
-                            Новости
-                        </Link>
-                    </li>
-                    <li className="header__nav-link">
-                        <Link
-                            to="/about"
-                            className="header__nav-link-item"
-                        >
-                            О проекте
-                        </Link>
-                    </li>
-                    <li className="header__nav-link">
-                        <Link
-                            to="/contacts"
-                            className="header__nav-link-item"
-                        >
-                            Контакты
-                        </Link>
-                    </li>
+                    {navigationList.map((link) => (
+                        <li className="header__nav-link">
+                            <HeaderLink link={link} />
+                        </li>
+                    ))}
                 </ul>
             </nav>
+            <button className="header__menu-button">
+                Button
+            </button>
         </header>
     );
 };

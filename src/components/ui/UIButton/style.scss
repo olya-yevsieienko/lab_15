@@ -1,0 +1,11 @@
+.ui-button {
+    padding: 8px 16px;
+
+    &--md {
+        padding: 16px 20px;
+    }
+
+    &--lg {
+        padding: 20px 32px;
+    }
+}
