@@ -1,11 +1,33 @@
 .ui-button {
     padding: 8px 16px;
+    border-radius: 32px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
 
     &--md {
         padding: 16px 20px;
+        font-size: 20px;
     }
 
     &--lg {
-        padding: 20px 32px;
+        padding: 28px 60px;
+        font-size: 32px;
+        border-radius: 48px;
+    }
+
+    &--green {
+        background-color: $accent-forest;
+    }
+
+    &--black {
+        background-color: $bg-base;
+        color: $text-primary;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+            background-color: $bg-soft;
+            transform: scale(1.05);
+        }
     }
 }

@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import {navigationList} from '../../models';
+import {Link} from 'react-router-dom';
+import {navigationList} from '../../models/navigation';
 import HeaderLink from './HeaderLink';
 
 import './Header.scss';

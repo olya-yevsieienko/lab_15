@@ -1,0 +1,13 @@
+.container {
+    max-width: 1200px;
+    // margin: 0 auto;
+    margin: 0 28px;
+
+    // @include devices($tablet) {
+    //     margin: 28px;
+    // }
+
+    // @include devices($mobile) {
+    //     margin: 16px;
+    // }
+}

@@ -1,12 +1,10 @@
-@use '../../assets/styles/vars.scss' as *;
-
 .footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 20px 40px;
-    background-color: $background-color;
+    background-color: $accent-forest;
 }
 
 .footer__info {
-    color: $light-text-color;
+    color: $text-primary;
 }

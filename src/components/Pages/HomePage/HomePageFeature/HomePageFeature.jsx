@@ -1,12 +1,19 @@
+import './style.scss';
+
 const HomePageFeature = ({feature}) => {
     return (
-        <div>
+        <div className="home-page-feature">
             <img
                 src={feature.iconSrc}
+                className="home-page-feature__image"
                 alt="Иконка"
             />
-            <h4>{feature.title}</h4>
-            <p>{feature.description}</p>
+            <h4 className="home-page-feature__title">
+                {feature.title}
+            </h4>
+            <p className="home-page-feature__description">
+                {feature.description}
+            </p>
         </div>
     );
 };

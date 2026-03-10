@@ -1,6 +1,3 @@
-@import '../../assets/styles/mixins.scss';
-@import '../../assets/styles/vars.scss';
-
 .header {
   position: sticky;
   top: 0;
@@ -9,7 +6,7 @@
   grid-template-columns: 80px 1fr;
   height: $header-height;
   padding: 2rem;
-  background-color: $background-color;
+  background-color: $accent-forest;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 
   @include devices($tablet) {
@@ -33,7 +30,7 @@
 
     &-link-item {
       position: relative;
-      color: $light-text-color;
+      color: $text-primary;
       text-decoration: none;
       font-size: 20px;
       text-transform: uppercase;
@@ -47,7 +44,7 @@
         right: 0;
         width: 0;
         height: 2px;
-        background-color: $light-text-color;
+        background-color: $text-primary;
         transition: width 0.3s ease;
       }
 

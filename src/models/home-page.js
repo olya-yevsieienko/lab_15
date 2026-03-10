@@ -1,18 +1,3 @@
-export const navigationList = [
-    {
-        to: '/catalog',
-        title: 'Дистанции',
-    },
-    {
-        to: '/registration',
-        title: 'Регистрация',
-    },
-    {
-        to: '/about',
-        title: 'О проекте',
-    },
-];
-
 export const featuresList = [
     {
         title: 'Безумные маршруты',
