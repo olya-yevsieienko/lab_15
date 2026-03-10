@@ -1,12 +1,26 @@
-// Devices
-$tablet: 780px;
-$mobile: 480px;
+// Breakpoints
+$tablet: 980px;
+$mobile: 640px;
+
+// Typography
+$font-display: 'Space Grotesk', 'Trebuchet MS', sans-serif;
+$font-body: 'Manrope', 'Segoe UI', sans-serif;
 
 // Colors
-$background-color: #223524;
-$light-text-color: #ffffff;
-$dark-text-color: #3d3838;
+$bg-deep: #0e1d1f;
+$bg-surface: #f4f2ec;
+$bg-surface-soft: #fffdf9;
+$text-main: #121917;
+$text-muted: #4f5d57;
+$accent: #eb5e28;
+$accent-dark: #bc3d13;
+$line: #d7d3c8;
+$success: #2a9d63;
 
-// Sizes
-$header-height: 80px;
-$header-height-mobile: 56px;
+// Layout
+$header-height: 88px;
+$header-height-mobile: 72px;
+$container: 1120px;
+$radius-xl: 28px;
+$radius-lg: 20px;
+$radius-md: 14px;

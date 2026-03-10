@@ -1,11 +1,34 @@
+@use '../../../assets/styles/vars.scss' as *;
+
 .ui-button {
-    padding: 8px 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 999px;
+  font-family: $font-display;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #fff;
+  background: linear-gradient(135deg, $accent, #ee964b);
+  box-shadow: 0 12px 24px rgba(235, 94, 40, 0.28);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
 
-    &--md {
-        padding: 16px 20px;
-    }
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 30px rgba(235, 94, 40, 0.34);
+    filter: saturate(1.05);
+  }
 
-    &--lg {
-        padding: 20px 32px;
-    }
+  &:active {
+    transform: translateY(0);
+  }
+
+  &--md {
+    padding: 0.9rem 1.3rem;
+    font-size: 0.9rem;
+  }
+
+  &--lg {
+    padding: 1rem 1.8rem;
+    font-size: 1rem;
+  }
 }

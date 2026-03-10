@@ -1,0 +1,74 @@
+@use '../../../assets/styles/vars.scss' as *;
+
+.registration-page {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 1rem;
+
+  &__intro,
+  &__steps {
+    border-radius: $radius-xl;
+    padding: 2rem;
+    background: $bg-surface-soft;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 18px 34px rgba(12, 22, 19, 0.08);
+  }
+
+  &__eyebrow {
+    margin: 0;
+    font: 700 0.8rem/1 $font-display;
+    color: $accent;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  h1,
+  h2 {
+    margin: 0.7rem 0 0.8rem;
+    font-family: $font-display;
+    line-height: 1.1;
+  }
+
+  p {
+    margin: 0;
+    color: $text-muted;
+    max-width: 60ch;
+  }
+
+  ol {
+    margin: 0;
+    padding-left: 1.2rem;
+    display: grid;
+    gap: 0.8rem;
+    color: $text-main;
+
+    li::marker {
+      font-weight: 700;
+      color: $accent-dark;
+    }
+  }
+
+  &__actions {
+    margin-top: 1.2rem;
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+
+  &__secondary {
+    background: linear-gradient(135deg, #6d7b76, #4b5954);
+    box-shadow: 0 10px 22px rgba(70, 88, 82, 0.2);
+  }
+}
+
+@media (max-width: $tablet) {
+  .registration-page {
+    grid-template-columns: 1fr;
+
+    &__intro,
+    &__steps {
+      border-radius: $radius-lg;
+      padding: 1.2rem;
+    }
+  }
+}

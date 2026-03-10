@@ -1,12 +1,69 @@
+@use '../../assets/styles/mixins.scss' as *;
 @use '../../assets/styles/vars.scss' as *;
 
 .footer {
+  margin-top: auto;
+  background: #0f2321;
+  color: #d7dfdb;
+
+  &__content {
+    width: min(100% - 3rem, $container);
+    margin: 0 auto;
+    padding: 2rem 0;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 20px 40px;
-    background-color: $background-color;
+    grid-template-columns: 1.4fr auto auto;
+    gap: 2rem;
+  }
+
+  &__brand {
+    h2 {
+      margin: 0 0 0.5rem;
+      font: 700 1.2rem/1.1 $font-display;
+      color: #fff;
+    }
+
+    p {
+      margin: 0;
+      max-width: 42ch;
+      color: rgba(215, 223, 219, 0.86);
+    }
+  }
+
+  &__nav {
+    display: grid;
+    align-content: start;
+    gap: 0.55rem;
+
+    a {
+      text-decoration: none;
+      color: #e5ece8;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  &__meta {
+    display: grid;
+    align-content: start;
+    gap: 0.35rem;
+
+    p {
+      margin: 0;
+      color: rgba(215, 223, 219, 0.86);
+    }
+  }
 }
 
-.footer__info {
-    color: $light-text-color;
+@media (max-width: $tablet) {
+  .footer {
+    &__content {
+      width: min(100% - 1.5rem, $container);
+      padding: 1.4rem 0;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
 }

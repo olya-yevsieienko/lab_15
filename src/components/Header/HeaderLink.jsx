@@ -1,14 +1,16 @@
-import { Link } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
-const HeaderLink = ({link}) => {
-    return (
-        <Link
-            to={link.to}
-            className="header__nav-link-item"
-        >
-            {link.title}
-        </Link>
-    );
+const HeaderLink = ({ link }) => {
+  return (
+    <NavLink
+      to={link.to}
+      className={({ isActive }) =>
+        `header__nav-link-item${isActive ? ' header__nav-link-item--active' : ''}`
+      }
+    >
+      {link.title}
+    </NavLink>
+  );
 };
 
 export default HeaderLink;

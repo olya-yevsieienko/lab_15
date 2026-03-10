@@ -1,14 +1,13 @@
-const HomePageFeature = ({feature}) => {
-    return (
-        <div>
-            <img
-                src={feature.iconSrc}
-                alt="Иконка"
-            />
-            <h4>{feature.title}</h4>
-            <p>{feature.description}</p>
-        </div>
-    );
+const HomePageFeature = ({ feature }) => {
+  return (
+    <article className="feature-card">
+      <span className="feature-card__emoji" aria-hidden="true">
+        {feature.emoji}
+      </span>
+      <h3 className="feature-card__title">{feature.title}</h3>
+      <p className="feature-card__description">{feature.description}</p>
+    </article>
+  );
 };
 
 export default HomePageFeature;

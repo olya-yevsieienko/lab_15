@@ -1,71 +1,117 @@
-@import '../../assets/styles/mixins.scss';
-@import '../../assets/styles/vars.scss';
+@use '../../assets/styles/mixins.scss' as *;
+@use '../../assets/styles/vars.scss' as *;
 
 .header {
   position: sticky;
   top: 0;
-  z-index: 1000;
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  height: $header-height;
-  padding: 2rem;
-  background-color: $background-color;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  background: linear-gradient(135deg, rgba(15, 35, 32, 0.95), rgba(20, 46, 44, 0.9));
 
-  @include devices($tablet) {
-    display: flex;
+  &__content {
+    width: min(100% - 3rem, $container);
+    margin: 0 auto;
+    min-height: $header-height;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-    height: $header-height-mobile;
+    gap: 2rem;
+
+    @include devices($tablet) {
+      min-height: $header-height-mobile;
+      width: min(100% - 1.5rem, $container);
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+    }
+  }
+
+  &__brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: #fdfaf3;
+
+    &-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      font: 700 0.9rem/1 $font-display;
+      letter-spacing: 0.08em;
+      background: linear-gradient(145deg, #f4d35e, #ee964b);
+      color: #101716;
+      box-shadow: 0 6px 20px rgba(238, 150, 75, 0.35);
+    }
+
+    &-text {
+      font: 600 1rem/1 $font-display;
+      letter-spacing: 0.02em;
+    }
   }
 
   &__nav {
-    &-list {
-      display: grid;
-      grid-template-columns: repeat(3, auto);
-      justify-content: center;
-      gap: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      list-style: none;
-    }
-
-    &-link-item {
-      position: relative;
-      color: $light-text-color;
-      text-decoration: none;
-      font-size: 20px;
-      text-transform: uppercase;
-      transition: color 0.3s;
-
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: -8px;
-        left: 0;
-        right: 0;
-        width: 0;
-        height: 2px;
-        background-color: $light-text-color;
-        transition: width 0.3s ease;
-      }
-
-      &:hover::after {
-        width: 100%;
-      }
-    }
-
     @include devices($tablet) {
       display: none;
     }
+
+    &-list {
+      display: flex;
+      justify-content: center;
+      gap: 0.6rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    &-link-item {
+      display: block;
+      padding: 0.45rem 0.8rem;
+      border-radius: 999px;
+      color: rgba(255, 250, 243, 0.82);
+      text-decoration: none;
+      font: 500 0.92rem/1.2 $font-display;
+      letter-spacing: 0.01em;
+      transition: 0.25s ease;
+
+      &:hover {
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0.09);
+      }
+
+      &--active {
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0.16);
+      }
+    }
   }
 
-  &__menu-button {
-    display: none;
+  &__action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    color: #fff;
+    font: 700 0.82rem/1 $font-display;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: 0.25s ease;
+
+    &:hover {
+      border-color: rgba(255, 255, 255, 0.45);
+      background: rgba(255, 255, 255, 0.08);
+    }
 
     @include devices($tablet) {
-      display: block;
+      min-height: 36px;
+      padding: 0.4rem 0.85rem;
+      font-size: 0.75rem;
     }
   }
 }
