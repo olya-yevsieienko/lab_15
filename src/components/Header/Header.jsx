@@ -16,7 +16,7 @@ const Header = () => {
         <nav className="header__nav" aria-label="Основная навигация">
           <ul className="header__nav-list">
             {navigationList.map((link) => (
-              <li className="header__nav-link" key={link.to}>
+              <li className="header__nav-item" key={link.to}>
                 <HeaderLink link={link} />
               </li>
             ))}

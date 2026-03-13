@@ -1,30 +1,30 @@
 
 .races-page {
   display: grid;
-  gap: 1rem;
+  gap: 16px;
 
   &__header {
     background: $bg-surface-soft;
-    border-radius: 14px;
+    border-radius: 16px;
     border: 0;
     box-shadow: $shadow-soft;
-    padding: 1.6rem;
+    padding: 24px;
   }
 
   &__card {
-    border-radius: 14px;
+    border-radius: 16px;
     border: 0;
     box-shadow: $shadow-soft;
-    padding: 1.6rem;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    padding: 24px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
 
   &__eyebrow {
     margin: 0;
-    font: 700 0.76rem/1 $font-display;
+    font: 700 12px/1 $font-display;
     color: $accent;
-    letter-spacing: 0.08em;
+    letter-spacing: 0px;
     text-transform: uppercase;
   }
 
@@ -38,7 +38,7 @@
 
   &__header {
     display: grid;
-    gap: 0.7rem;
+    gap: 12px;
 
     p {
       margin: 0;
@@ -53,12 +53,12 @@
     list-style: none;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
+    gap: 16px;
   }
 
   &__card {
     display: grid;
-    gap: 0.8rem;
+    gap: 12px;
 
     p {
       margin: 0;
@@ -69,15 +69,15 @@
   &__meta {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.4rem;
+    gap: 8px;
 
     span {
       background: $bg-accent-soft;
       color: $text-accent-soft;
       border: 0;
       border-radius: 8px;
-      padding: 0.26rem 0.52rem;
-      font: 600 0.72rem/1 $font-display;
+      padding: 4px 8px;
+      font: 600 12px/1 $font-display;
     }
   }
 
@@ -86,18 +86,18 @@
     padding: 0;
     list-style: none;
     display: grid;
-    gap: 0.45rem;
+    gap: 8px;
   }
 
   &__distance-link {
     display: grid;
     grid-template-columns: 1fr auto auto;
-    gap: 0.6rem;
+    gap: 8px;
     align-items: center;
-    padding: 0.7rem 0.8rem;
+    padding: 12px 12px;
     text-decoration: none;
     color: $text-strong;
-    border-radius: 10px;
+    border-radius: 12px;
     border: 0;
     background: $bg-surface;
     transition: border-color 0.2s ease, background-color 0.2s ease;
@@ -118,8 +118,8 @@
   .races-page {
     &__header,
     &__card {
-      border-radius: 10px;
-      padding: 1.1rem;
+      border-radius: 12px;
+      padding: 16px;
     }
 
     &__list {

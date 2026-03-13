@@ -3,8 +3,8 @@
   flex: 1;
 
   &__content {
-    width: min(100% - 3rem, $container);
-    margin: 2rem auto 3rem;
+    width: min(100% - 48px, $container);
+    margin: 32px auto 48px;
     animation: rise-up 0.5s ease both;
   }
 }
@@ -12,8 +12,8 @@
 @media (max-width: $tablet) {
   .main {
     &__content {
-      width: min(100% - 1.5rem, $container);
-      margin: 1.25rem auto 2rem;
+      width: min(100% - 24px, $container);
+      margin: 20px auto 32px;
     }
   }
 }

@@ -6,45 +6,45 @@
   width: 100%;
   border-bottom: 0;
   background: $bg-header;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
 
   &__content {
-    width: min(100% - 2.4rem, $container);
+    width: min(100% - 40px, $container);
     margin: 0 auto;
     min-height: 72px;
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
-    gap: 2rem;
+    gap: 32px;
 
     @include devices($tablet) {
-      width: min(100% - 1.2rem, $container);
-      min-height: 62px;
+      width: min(100% - 20px, $container);
+      min-height: 64px;
       grid-template-columns: 1fr auto;
-      gap: 1rem;
+      gap: 16px;
     }
   }
 
   &__brand {
     display: inline-flex;
     align-items: center;
-    gap: 0.7rem;
+    gap: 12px;
     text-decoration: none;
 
     &-mark {
-      width: 34px;
-      height: 34px;
+      width: 36px;
+      height: 36px;
       display: grid;
       place-items: center;
       border-radius: 8px;
-      font: 700 0.84rem/1 $font-display;
-      letter-spacing: 0.06em;
+      font: 700 12px/1 $font-display;
+      letter-spacing: 0px;
       background: $accent;
       color: $white;
     }
 
     &-text {
-      font: 600 0.95rem/1 $font-display;
+      font: 600 16px/1 $font-display;
       color: $white;
     }
   }
@@ -56,31 +56,36 @@
 
     &-list {
       display: flex;
-      justify-content: center;
-      gap: 0.5rem;
-      list-style: none;
-      padding: 0;
       margin: 0;
+      padding: 0;
+      list-style: none;
+      gap: 8px;
+      justify-content: center;
     }
 
-    &-link-item {
+    &-item {
+      display: flex;
+      align-items: center;
+    }
+
+    &-link {
       display: block;
-      padding: 0.45rem 0.75rem;
-      border-radius: 999px;
+      padding: 8px 12px;
       border: 0;
+      border-radius: 999px;
       color: $text-secondary;
+      font: 500 16px/1.2 $font-display;
       text-decoration: none;
-      font: 500 0.88rem/1.2 $font-display;
       transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 
       &:hover {
-        color: $white;
         background: $bg-nav-hover;
+        color: $white;
       }
 
       &--active {
-        color: $white;
         background: $bg-accent-medium;
+        color: $white;
       }
     }
   }
@@ -89,14 +94,14 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 38px;
-    padding: 0.5rem 0.9rem;
+    min-height: 40px;
+    padding: 8px 16px;
     border-radius: 999px;
     border: 0;
     text-decoration: none;
     color: $white;
-    font: 700 0.78rem/1 $font-display;
-    letter-spacing: 0.03em;
+    font: 700 12px/1 $font-display;
+    letter-spacing: 0px;
     text-transform: none;
     background: $bg-accent-soft;
     transition: background-color 0.2s ease;
