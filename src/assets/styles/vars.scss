@@ -5,17 +5,74 @@ $mobile: 640px;
 // Typography
 $font-display: 'Space Grotesk', 'Trebuchet MS', sans-serif;
 $font-body: 'Manrope', 'Segoe UI', sans-serif;
+$font-heading: 'Unbounded', 'Trebuchet MS', sans-serif;
 
 // Colors
-$bg-deep: #0e1d1f;
-$bg-surface: #f4f2ec;
-$bg-surface-soft: #fffdf9;
-$text-main: #121917;
-$text-muted: #4f5d57;
-$accent: #eb5e28;
-$accent-dark: #bc3d13;
-$line: #d7d3c8;
-$success: #2a9d63;
+$bg-deep: #efe1c7;
+$bg-surface: #fffaf0;
+$bg-surface-soft: #f8ecd5;
+$text-main: #1f1811;
+$text-muted: #6c5a49;
+$accent: #d8402b;
+$accent-dark: #ab2f1f;
+$line: #d6c19e;
+$success: #3c8f45;
+
+// Neutrals
+$white: #ffffff;
+$black: #000000;
+
+// Page backgrounds
+$bg-page-start: #f2e7d0;
+$bg-page-end: #efe1c7;
+$bg-header: rgba(#14120f, 0.93);
+$bg-footer: #16130f;
+$bg-banner-overlay: #120f0b;
+$bg-registration-start: #2d2218;
+$bg-registration-end: #1f1711;
+$bg-surface-contrast: #f2e2c6;
+$bg-secondary-button: #e5d7bc;
+$bg-secondary-button-hover: #dbcba8;
+$bg-surface-light: #fffdf8;
+$bg-surface-chip: #efdfc1;
+$bg-surface-card-light: #fff8ec;
+
+// Text colors
+$text-strong: #231a12;
+$text-soft: #231a12;
+$text-secondary: #f4ece0;
+$text-tertiary: #c9baa3;
+$text-dim: #ab9b86;
+$text-accent-soft: #8d2316;
+
+// Border and overlays
+$border-subtle: rgba($black, 0.1);
+$border-subtle-strong: rgba($white, 0.18);
+$border-header: rgba($white, 0.16);
+$border-banner-top: rgba($white, 0.18);
+$border-banner-bottom: rgba($white, 0.14);
+$border-ghost: rgba($white, 0.34);
+$border-accent: rgba($accent, 0.38);
+$border-accent-soft: rgba($accent, 0.3);
+$border-accent-light: rgba($accent, 0.28);
+$border-accent-medium: rgba($accent, 0.35);
+$border-accent-strong: rgba($accent, 0.45);
+$border-accent-hover: rgba($accent, 0.42);
+$focus-ring-accent: rgba($accent, 0.78);
+
+// Accent backgrounds
+$bg-accent-soft: rgba($accent, 0.14);
+$bg-accent-medium: rgba($accent, 0.16);
+$bg-accent-strong: rgba($accent, 0.18);
+$bg-accent-hover: rgba($accent, 0.24);
+$bg-ghost: rgba($white, 0.08);
+$bg-ghost-hover: rgba($white, 0.15);
+$bg-ghost-strong: rgba($white, 0.2);
+$bg-nav-hover: rgba($white, 0.1);
+
+// Shadows
+$shadow-soft: 0 10px 30px rgba($black, 0.08);
+$shadow-card: 0 12px 34px rgba($black, 0.1);
 
 // Layout
 $header-height: 88px;

@@ -14,7 +14,7 @@ const Footer = () => {
         </div>
 
         <nav className="footer__nav" aria-label="Дополнительная навигация">
-          <Link to="/catalog">Дистанции</Link>
+          <Link to="/races">Дистанции</Link>
           <Link to="/registration">Регистрация</Link>
           <Link to="/about">О проекте</Link>
         </nav>

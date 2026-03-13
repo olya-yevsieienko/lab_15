@@ -1,6 +1,6 @@
-import { aboutMetrics } from '../../../models';
+import { aboutMetrics } from '../../models/home-page';
 
-import './AboutUsPage.scss';
+import './style.scss';
 
 const AboutUsPage = () => {
   return (

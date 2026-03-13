@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-import { distanceList, featuresList } from '../../../models';
-import UIButton from '../../ui/UIButton/UIButton';
-import HomePageFeature from './HomePageFeature/HomePageFeature';
+import { distanceList, featuresList } from '../../models/home-page';
+import UIButton from '../../components/ui/UIButton/UIButton';
+import HomePageFeature from '../../components/Pages/HomePage/HomePageFeature/HomePageFeature';
 
 import './style.scss';
 
@@ -22,7 +22,7 @@ const HomePage = () => {
           <button
             className="home-page__ghost-action"
             type="button"
-            onClick={() => navigate('/catalog')}
+            onClick={() => navigate('/races')}
           >
             Посмотреть дистанции
           </button>

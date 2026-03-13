@@ -1,6 +1,5 @@
 @use 'reset-css/sass/reset';
-@use './vars.scss' as *;
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Unbounded:wght@500;600;700;800&display=swap');
 
 * {
   box-sizing: border-box;
@@ -12,25 +11,43 @@ body,
   min-height: 100%;
 }
 
+html,
+body {
+  overflow-x: clip;
+}
+
 body {
   margin: 0;
   font-family: $font-body;
   color: $text-main;
   background:
-    radial-gradient(circle at 8% 15%, #fff5dc 0%, rgba(255, 245, 220, 0) 30%),
-    radial-gradient(circle at 85% 12%, #dceef5 0%, rgba(220, 238, 245, 0) 35%),
-    linear-gradient(180deg, #f3efe5 0%, #f8f5ef 45%, #f3eee3 100%);
-  line-height: 1.45;
+    radial-gradient(circle at 10% 0, rgba($accent, 0.08), transparent 30%),
+    linear-gradient(180deg, $bg-page-start 0%, $bg-page-end 100%);
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
   color: inherit;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-heading !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.03em;
+}
+
 @keyframes rise-up {
   from {
     opacity: 0;
-    transform: translateY(18px);
+    transform: translateY(16px);
   }
   to {
     opacity: 1;

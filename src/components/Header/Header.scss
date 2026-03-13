@@ -1,26 +1,25 @@
-@use '../../assets/styles/mixins.scss' as *;
-@use '../../assets/styles/vars.scss' as *;
 
 .header {
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
-  background: linear-gradient(135deg, rgba(15, 35, 32, 0.95), rgba(20, 46, 44, 0.9));
+  width: 100%;
+  border-bottom: 0;
+  background: $bg-header;
+  backdrop-filter: blur(10px);
 
   &__content {
-    width: min(100% - 3rem, $container);
+    width: min(100% - 2.4rem, $container);
     margin: 0 auto;
-    min-height: $header-height;
+    min-height: 72px;
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
     gap: 2rem;
 
     @include devices($tablet) {
-      min-height: $header-height-mobile;
-      width: min(100% - 1.5rem, $container);
+      width: min(100% - 1.2rem, $container);
+      min-height: 62px;
       grid-template-columns: 1fr auto;
       gap: 1rem;
     }
@@ -29,26 +28,24 @@
   &__brand {
     display: inline-flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.7rem;
     text-decoration: none;
-    color: #fdfaf3;
 
     &-mark {
-      width: 40px;
-      height: 40px;
-      border-radius: 12px;
+      width: 34px;
+      height: 34px;
       display: grid;
       place-items: center;
-      font: 700 0.9rem/1 $font-display;
-      letter-spacing: 0.08em;
-      background: linear-gradient(145deg, #f4d35e, #ee964b);
-      color: #101716;
-      box-shadow: 0 6px 20px rgba(238, 150, 75, 0.35);
+      border-radius: 8px;
+      font: 700 0.84rem/1 $font-display;
+      letter-spacing: 0.06em;
+      background: $accent;
+      color: $white;
     }
 
     &-text {
-      font: 600 1rem/1 $font-display;
-      letter-spacing: 0.02em;
+      font: 600 0.95rem/1 $font-display;
+      color: $white;
     }
   }
 
@@ -60,7 +57,7 @@
     &-list {
       display: flex;
       justify-content: center;
-      gap: 0.6rem;
+      gap: 0.5rem;
       list-style: none;
       padding: 0;
       margin: 0;
@@ -68,22 +65,22 @@
 
     &-link-item {
       display: block;
-      padding: 0.45rem 0.8rem;
+      padding: 0.45rem 0.75rem;
       border-radius: 999px;
-      color: rgba(255, 250, 243, 0.82);
+      border: 0;
+      color: $text-secondary;
       text-decoration: none;
-      font: 500 0.92rem/1.2 $font-display;
-      letter-spacing: 0.01em;
-      transition: 0.25s ease;
+      font: 500 0.88rem/1.2 $font-display;
+      transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 
       &:hover {
-        color: #fff;
-        background-color: rgba(255, 255, 255, 0.09);
+        color: $white;
+        background: $bg-nav-hover;
       }
 
       &--active {
-        color: #fff;
-        background-color: rgba(255, 255, 255, 0.16);
+        color: $white;
+        background: $bg-accent-medium;
       }
     }
   }
@@ -92,26 +89,20 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 40px;
-    padding: 0.5rem 1rem;
+    min-height: 38px;
+    padding: 0.5rem 0.9rem;
     border-radius: 999px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 0;
     text-decoration: none;
-    color: #fff;
-    font: 700 0.82rem/1 $font-display;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    transition: 0.25s ease;
+    color: $white;
+    font: 700 0.78rem/1 $font-display;
+    letter-spacing: 0.03em;
+    text-transform: none;
+    background: $bg-accent-soft;
+    transition: background-color 0.2s ease;
 
     &:hover {
-      border-color: rgba(255, 255, 255, 0.45);
-      background: rgba(255, 255, 255, 0.08);
-    }
-
-    @include devices($tablet) {
-      min-height: 36px;
-      padding: 0.4rem 0.85rem;
-      font-size: 0.75rem;
+      background: $bg-accent-hover;
     }
   }
 }

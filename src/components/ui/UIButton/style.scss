@@ -1,21 +1,18 @@
-@use '../../../assets/styles/vars.scss' as *;
-
 .ui-button {
   cursor: pointer;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 999px;
   font-family: $font-display;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.02em;
-  color: #fff;
-  background: linear-gradient(135deg, $accent, #ee964b);
-  box-shadow: 0 12px 24px rgba(235, 94, 40, 0.28);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+  text-transform: none;
+  color: $white;
+  background: $accent;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 16px 30px rgba(235, 94, 40, 0.34);
-    filter: saturate(1.05);
+    background: $accent-dark;
+    transform: translateY(-1px);
   }
 
   &:active {
@@ -23,12 +20,12 @@
   }
 
   &--md {
-    padding: 0.9rem 1.3rem;
-    font-size: 0.9rem;
+    padding: 0.8rem 1.1rem;
+    font-size: 0.86rem;
   }
 
   &--lg {
-    padding: 1rem 1.8rem;
-    font-size: 1rem;
+    padding: 0.95rem 1.5rem;
+    font-size: 0.95rem;
   }
 }

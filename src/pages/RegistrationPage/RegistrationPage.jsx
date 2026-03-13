@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
-import { registrationSteps } from '../../../models';
-import UIButton from '../../ui/UIButton/UIButton';
+import { registrationSteps } from '../../models/home-page';
+import UIButton from '../../components/ui/UIButton/UIButton';
 
-import './RegistrationPage.scss';
+import './style.scss';
 
 const RegistrationPage = () => {
   const navigate = useNavigate();
@@ -26,7 +26,7 @@ const RegistrationPage = () => {
           ))}
         </ol>
         <div className="registration-page__actions">
-          <UIButton label="Выбрать дистанцию" onClick={() => navigate('/catalog')} />
+          <UIButton label="Выбрать дистанцию" onClick={() => navigate('/races')} />
           <UIButton
             label="На главную"
             onClick={() => navigate('/')}
