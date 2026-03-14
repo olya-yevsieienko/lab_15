@@ -1,0 +1,44 @@
+
+.not-found-page {
+  display: grid;
+  justify-items: start;
+  gap: 12px;
+  border-radius: 16px;
+  padding: 24px;
+  background: $bg-surface-soft;
+  box-shadow: $shadow-soft;
+
+  &__code {
+    margin: 0;
+    font: 800 clamp(52px, 10vw, 88px) / 0.92 $font-display;
+    color: $accent;
+  }
+
+  h1 {
+    margin: 0;
+    color: $text-strong;
+  }
+
+  p {
+    margin: 0;
+    color: $text-muted;
+    max-width: 54ch;
+  }
+
+  &__link {
+    margin-top: 4px;
+    padding: 12px 20px;
+    border-radius: 999px;
+    text-decoration: none;
+    color: $white;
+    background: $accent;
+    font: 700 16px/1 $font-display;
+  }
+}
+
+@media (max-width: $tablet) {
+  .not-found-page {
+    border-radius: 12px;
+    padding: 16px;
+  }
+}

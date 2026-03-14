@@ -1,0 +1,19 @@
+
+.main {
+  flex: 1;
+
+  &__content {
+    width: min(100% - 48px, $container);
+    margin: 32px auto 48px;
+    animation: rise-up 0.5s ease both;
+  }
+}
+
+@media (max-width: $tablet) {
+  .main {
+    &__content {
+      width: min(100% - 24px, $container);
+      margin: 20px auto 32px;
+    }
+  }
+}

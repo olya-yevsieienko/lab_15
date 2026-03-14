@@ -1,0 +1,199 @@
+
+.home-page {
+  display: grid;
+  gap: 16px;
+
+  &__features,
+  &__distances,
+  &__registration {
+    border-radius: 16px;
+    padding: 32px;
+    background: $bg-surface-soft;
+    border: 0;
+    box-shadow: $shadow-soft;
+  }
+
+  &__banner {
+    color: $white;
+    width: 100dvw;
+    min-height: 100svh;
+    margin-left: calc(50% - 50dvw);
+    margin-right: calc(50% - 50dvw);
+    padding: clamp(20px, 4vw, 48px);
+    background:
+      linear-gradient(120deg, rgba($bg-banner-overlay, 0.82), rgba($bg-banner-overlay, 0.52)),
+      url('../../assets/images/banner.jpg') center/cover no-repeat;
+    display: grid;
+    align-content: center;
+    gap: 16px;
+    border-top: 1px solid $border-banner-top;
+    border-bottom: 1px solid $border-banner-bottom;
+  }
+
+  &__eyebrow {
+    width: fit-content;
+    margin: 0;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: rgba($black, 0.22);
+    border: 0;
+    font: 600 12px/1 $font-display;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+  }
+
+  &__banner-title {
+    margin: 0;
+    font: 800 clamp(32px, 7vw, 76px) / 0.94 $font-display;
+    letter-spacing: 0px;
+    text-transform: none;
+  }
+
+  &__banner-description {
+    max-width: 52ch;
+    margin: 0;
+    color: rgba($white, 0.88);
+  }
+
+  &__banner-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 4px;
+    flex-wrap: wrap;
+  }
+
+  &__ghost-action {
+    padding: 12px 16px;
+    border-radius: 999px;
+    border: 0;
+    color: $white;
+    background: $bg-ghost;
+    font: 700 16px/1 $font-display;
+    cursor: pointer;
+
+    &:hover {
+      background: $bg-ghost-hover;
+    }
+  }
+
+  &__section-title {
+    margin: 0 0 16px;
+    font: 700 clamp(20px, 2.1vw, 24px) / 1.1 $font-display;
+    color: $text-strong;
+    letter-spacing: 0px;
+  }
+
+  &__feature-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  &__distance-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  &__distance-card {
+    padding: 16px;
+    border-radius: 12px;
+    background: $bg-surface;
+    border: 0;
+    display: grid;
+    grid-template-columns: 1fr 1.8fr auto;
+    gap: 16px;
+    align-items: center;
+
+    h3 {
+      margin: 0;
+      font: 700 16px/1.1 $font-display;
+      color: $text-soft;
+    }
+
+    p {
+      margin: 0;
+      color: $text-muted;
+    }
+  }
+
+  &__distance-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+
+    span {
+      padding: 4px 8px;
+      border-radius: 999px;
+      font: 600 12px/1 $font-display;
+      background: $bg-accent-soft;
+      color: $text-accent-soft;
+      border: 0;
+    }
+  }
+
+  &__registration {
+    background: linear-gradient(145deg, $bg-registration-start 0%, $bg-registration-end 100%);
+    color: $white;
+    display: grid;
+    gap: 8px;
+
+    h2 {
+      margin: 0;
+      font: 700 clamp(20px, 2vw, 24px) / 1.2 $font-display;
+    }
+
+    p {
+      max-width: 64ch;
+      margin: 0;
+      color: rgba($white, 0.8);
+    }
+  }
+}
+
+.feature-card {
+  padding: 16px;
+  border-radius: 12px;
+  background: $bg-surface;
+  border: 0;
+  height: 100%;
+
+  &__title {
+    margin: 0 0 4px;
+    font: 700 16px/1.2 $font-display;
+    color: $text-soft;
+  }
+
+  &__description {
+    margin: 0;
+    color: $text-muted;
+  }
+}
+
+@media (max-width: $tablet) {
+  .home-page {
+    &__features,
+    &__distances,
+    &__registration {
+      padding: 16px;
+      border-radius: 12px;
+    }
+
+    &__feature-list {
+      grid-template-columns: 1fr;
+    }
+
+    &__distance-card {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    &__banner {
+      min-height: 100svh;
+      align-content: end;
+    }
+  }
+}
