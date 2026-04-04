@@ -1,0 +1,121 @@
+.home-page {
+    display: grid;
+    gap: 16px;
+
+    &__banner {
+        color: $white;
+        width: 100dvw;
+        min-height: calc(100dvh - 72px);
+        margin-left: calc(50% - 50dvw);
+        margin-right: calc(50% - 50dvw);
+        padding: clamp(20px, 4vw, 48px);
+        background:
+        linear-gradient(120deg, rgba($bg-banner-overlay, 0.82), rgba($bg-banner-overlay, 0.52)),
+        url('../../assets/images/banner.jpg') center/cover no-repeat;
+        display: grid;
+        align-content: center;
+        gap: 16px;
+        border-top: 1px solid $border-banner-top;
+        border-bottom: 1px solid $border-banner-bottom;
+
+        @include devices($tablet) {
+            min-height: calc(100dvh - 64px);
+            align-content: end;
+        }
+    }
+
+    &__eyebrow {
+        width: fit-content;
+        margin: 0;
+        padding: 4px 8px;
+        border-radius: 999px;
+        background: rgba($black, 0.22);
+        border: 0;
+        font: 600 12px/1 $font-display;
+        text-transform: uppercase;
+        letter-spacing: 0px;
+    }
+
+    &__banner-title {
+        margin: 0;
+        font: 800 clamp(32px, 7vw, 76px) / 0.94 $font-display;
+        letter-spacing: 0px;
+        text-transform: none;
+    }
+
+    &__banner-description {
+        max-width: 52ch;
+        margin: 0;
+        color: rgba($white, 0.88);
+    }
+
+    &__banner-actions {
+        display: flex;
+        gap: 12px;
+        margin-top: 4px;
+        flex-wrap: wrap;
+    }
+
+    &__ghost-action {
+        padding: 12px 16px;
+        border-radius: 999px;
+        border: 0;
+        color: $white;
+        background: $bg-ghost;
+        font: 700 16px/1 $font-display;
+        cursor: pointer;
+
+        &:hover {
+        background: $bg-ghost-hover;
+        }
+    }
+
+    &__feature-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    &__distance-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    &__distance-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    &__registration {
+        &-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    }
+}
+
+@media (max-width: $tablet) {
+  .home-page {
+    &__features,
+    &__distances,
+    &__registration {
+      padding: 16px;
+      border-radius: 12px;
+    }
+
+    &__feature-list {
+      grid-template-columns: 1fr;
+    }
+
+    &__distance-card {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+  }
+}

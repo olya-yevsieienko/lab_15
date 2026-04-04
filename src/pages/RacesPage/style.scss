@@ -1,0 +1,14 @@
+.races-page {
+    margin-top: 20px;
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin-top: 12px;
+
+        @include devices($mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+}

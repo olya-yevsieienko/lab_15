@@ -1,0 +1,18 @@
+.feature-card {
+    padding: 16px;
+    border-radius: 12px;
+    background: $bg-surface;
+    border: 0;
+    height: 100%;
+
+    &__title {
+        margin: 0 0 4px;
+        font: 700 16px/1.2 $font-display;
+        color: $text-soft;
+    }
+
+    &__description {
+        margin: 0;
+        color: $text-muted;
+    }
+}

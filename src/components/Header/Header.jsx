@@ -1,38 +1,38 @@
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { navigationList } from '../../models/navigation';
 
-import './Header.css';
+import './Header.scss';
 
 const Header = () => {
     return (
         <header className="header">
-            <nav className="header__nav">
+        <div className="header__content">
+            <Link to="/" className="header__brand">
+                <span className="header__brand-mark">TR</span>
+                <span className="header__brand-text">Trail Run 2026</span>
+            </Link>
+
+            <nav className="header__nav" aria-label="Основная навигация">
                 <ul className="header__nav-list">
-                    <li className="header__nav-link">
+                    {navigationList.map((link) => (
+                    <li
+                        className="header__nav-item"
+                        key={link.to}
+                    >
                         <Link
-                            to="/"
-                            className="header__nav-link-item"
+                            to={link.to}
+                            className="header__nav-link"
                         >
-                            Новости
+                            {link.title}
                         </Link>
                     </li>
-                    <li className="header__nav-link">
-                        <Link
-                            to="/about"
-                            className="header__nav-link-item"
-                        >
-                            О проекте
-                        </Link>
-                    </li>
-                    <li className="header__nav-link">
-                        <Link
-                            to="/contacts"
-                            className="header__nav-link-item"
-                        >
-                            Контакты
-                        </Link>
-                    </li>
+                    ))}
                 </ul>
             </nav>
+            <Link to="/registration" className="header__action">
+                На старт
+            </Link>
+        </div>
         </header>
     );
 };

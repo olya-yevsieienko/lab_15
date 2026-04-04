@@ -1,0 +1,31 @@
+.about-us-page {
+    display: grid;
+    margin-top: 20px;
+
+    &__metrics {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+        margin-top: 12px;
+
+        @include devices($tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__metric {
+        padding: 16px;
+        border-radius: 12px;
+        background-color: $bg-surface;
+
+        span {
+            color: $text-accent-soft;
+            font-weight: 800;
+            font-size: 24px;
+        }
+
+        p {
+            font-weight: 600;
+        }
+    }
+}
