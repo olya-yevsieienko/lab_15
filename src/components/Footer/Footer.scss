@@ -1,10 +1,57 @@
 .footer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 20px 40px;
-    background-color: $accent-forest;
-}
+    margin-top: auto;
+    background: $bg-footer;
+    color: $text-tertiary;
+    border-top: 0;
 
-.footer__info {
-    color: $text-primary;
+    &__content {
+        width: min(100% - 40px, $container);
+        margin: 0 auto;
+        padding: 28px 0;
+        display: grid;
+        grid-template-columns: 1.4fr auto auto;
+        gap: 28px;
+
+        @include devices($tablet) {
+            width: min(100% - 20px, $container);
+            padding: 20px 0;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+    }
+
+    &__brand {
+        p {
+            margin: 0;
+            max-width: 42ch;
+            color: $text-dim;
+        }
+    }
+
+    &__nav {
+        display: grid;
+        align-content: start;
+        gap: 8px;
+
+        a {
+            text-decoration: none;
+            color: $text-secondary;
+            transition: color 0.2s ease;
+
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+
+    &__meta {
+        display: grid;
+        align-content: start;
+        gap: 4px;
+
+        p {
+            margin: 0;
+            color: $text-dim;
+        }
+    }
 }

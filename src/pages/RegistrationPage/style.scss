@@ -1,0 +1,15 @@
+.registration-page {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+
+    @include devices($tablet) {
+        grid-template-columns: 1fr;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 8px;
+    }
+}

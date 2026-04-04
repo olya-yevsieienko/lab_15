@@ -1,0 +1,35 @@
+.race-distance-page {
+    display: grid;
+    gap: 16px;
+    margin-top: 20px;
+
+    &__title {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 16px;
+    }
+
+    &__chips {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__faq {
+        &-list {
+            display: grid;
+            gap: 8px;
+        }
+
+        &-item {
+            padding: 16px;
+            border-radius: 16px;
+            background-color: $bg-accent-medium;
+        }
+    }
+}

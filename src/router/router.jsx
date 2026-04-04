@@ -1,10 +1,11 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { Layout } from '../layout/Layout';
-import AboutUsPage from '../pages/AboutUsPage';
+import AboutUsPage from '../pages/AboutUsPage/AboutUsPage';
 import HomePage from '../pages/HomePage/HomePage';
 import NotFoundPage from '../pages/NotFoundPage';
-import RacesPage from '../pages/RacesPage';
-import RegistrationPage from '../pages/RegistrationPage';
+import RacesPage from '../pages/RacesPage/RacesPage';
+import RegistrationPage from '../pages/RegistrationPage/RegistrationPage';
+import RaceDistancePage from '../pages/RaceDistancePage/RaceDistancePage';
 
 export const router = createBrowserRouter([
     {
@@ -13,6 +14,7 @@ export const router = createBrowserRouter([
         children: [
             { index: true, Component: HomePage },
             { path: 'races', Component: RacesPage },
+            { path: 'races/:slug/:distanceKm', Component: RaceDistancePage },
             { path: 'registration', Component: RegistrationPage },
             { path: 'about', Component: AboutUsPage },
             { path: '*', Component: NotFoundPage },

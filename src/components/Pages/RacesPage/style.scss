@@ -1,0 +1,40 @@
+.races-page-card {
+    display: grid;
+    gap: 12px;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: $shadow-card;
+
+    &__meta {
+        display: flex;
+        gap: 8px;
+
+        span {
+            display: inline-block;
+            padding: 2px 8px;
+            font-size: 12px;
+            background-color: $bg-accent-soft;
+            border-radius: 8px;
+        }
+    }
+
+    &__distance {
+        display: grid;
+        gap: 8px;
+
+        &-link {
+            display: grid;
+            grid-template-columns: 1fr auto auto;
+            gap: 8px;
+            padding: 12px;
+            text-decoration: none;
+            border-radius: 12px;
+            background-color: $bg-surface;
+            transition: opacity 0.3s;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
